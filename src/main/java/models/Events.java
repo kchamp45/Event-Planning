@@ -23,26 +23,6 @@ public class Events {
     Map<String, Integer> beverage = new HashMap<String, Integer>();
     Map<String, Integer> entertainment = new HashMap<String, Integer>();
 
-//    public HashMap<String, Integer>() food() {
-//        food.put("no food", 0);
-//        food.put("hor derves", 100);
-//        food.put("dinner", 200);
-//    }
-//        food;
-
-
-//    public HashMap<String, Integer> beverage() {
-//        beverage.put("water", 0);
-//        beverage.put("soda", 50);
-//        beverage.put("alcohol", 300);
-//    }
-//
-//    public HashMap<String, Integer> entertainment() {
-//        entertainment.put("clown", 0);
-//        entertainment.put("dj", 500);
-//        entertainment.put("live band", 1000);
-//    }
-
 
     public int numOfGuests(int input) {
         return input;
@@ -54,8 +34,8 @@ public class Events {
 
     public int foodPrice(String inputFoodChoice) {
         food.put("no food", 0);
-        food.put("hor derves", 100);
-        food.put("dinner", 200);
+        food.put("hor derves", 5);
+        food.put("dinner", 10);
         if(inputFoodChoice.equals("no food")) {
             foodPrice = food.get("no food");
         } else if (inputFoodChoice.equals("hor derves")) {
@@ -70,8 +50,8 @@ public class Events {
 
     public int beveragePrice(String inputBeverageChoice) {
         beverage.put("water", 0);
-        beverage.put("soda", 50);
-        beverage.put("alcohol", 300);
+        beverage.put("soda", 5);
+        beverage.put("alcohol", 20);
         if(inputBeverageChoice.equals("water")) {
             beveragePrice = beverage.get("water");
         } else if (inputBeverageChoice.equals("hor derves")) {
@@ -100,9 +80,9 @@ public class Events {
         return entertainmentPrice;
     }
 
-    public int costOfEvent(String foodie, String drink, String fun) {
+    public int costOfEvent(int guest, String foodie, String drink, String fun) {
         int totalCost = 0;
-        return totalCost += foodPrice + beveragePrice + entertainmentPrice;
+        return totalCost += (foodPrice * numOfGuests) + (beveragePrice * numOfGuests) + entertainmentPrice;
     }
 
 
