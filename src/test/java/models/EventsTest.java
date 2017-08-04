@@ -26,9 +26,7 @@ public class EventsTest {
     @Test
     public void foodSelection_returnFoodSelected_ArrayList() throws Exception {
         Events testEvent = new Events();
-        ArrayList<String> expectedOutput = new ArrayList<String>();
-        expectedOutput.add("no food");
-        assertEquals(expectedOutput, testEvent.foodSelection("no food"));
+        assertEquals("no food", testEvent.foodSelection("no food"));
     }
 
 }
