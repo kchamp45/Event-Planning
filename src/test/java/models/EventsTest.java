@@ -24,9 +24,14 @@ public class EventsTest {
     }
 
     @Test
-    public void foodSelection_returnFoodSelected_ArrayList() throws Exception {
+    public void foodSelection_returnFoodSelected_input() throws Exception {
         Events testEvent = new Events();
         assertEquals("no food", testEvent.foodSelection("no food"));
     }
 
+    @Test
+    public void foodPrice_returnPriceOfFoodSelected() throws Exception {
+        Events testEvent = new Events();
+        assertEquals(true, testEvent.foodPrice("no food"));
+    }
 }
