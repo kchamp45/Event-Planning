@@ -49,10 +49,10 @@ public class Events {
         beverage.put("alcohol", 20);
         if(inputBeverageChoice.equals("water")) {
             beveragePrice = beverage.get("water");
-        } else if (inputBeverageChoice.equals("hor derves")) {
-            beveragePrice  = beverage.get("hor derves");
-        } else if (inputBeverageChoice.equals("dinner")) {
-            beveragePrice  = beverage.get("dinner");
+        } else if (inputBeverageChoice.equals("soda")) {
+            beveragePrice  = beverage.get("soda");
+        } else if (inputBeverageChoice.equals("alcohol")) {
+            beveragePrice  = beverage.get("alcohol");
         } else {
             System.out.println("Please enter a valid beverage choice.");
         }
@@ -92,14 +92,12 @@ public class Events {
     public int multiFoodPrice(int guestNum, String foodie) {
         int groupFoodPrice = 0;
         foodCost(foodie);
-        return groupFoodPrice = foodPrice;
+        return groupFoodPrice = foodCost(foodie) * guestNum;
     }
+
     public int costOfEvent(int guestNum, String foodie, String drink, String fun) {
         int totalCost = 0;
-        foodCost(foodie);
-        beverageCost(drink);
-        entertainmentCost(fun);
-        return totalCost = foodPrice + beveragePrice + entertainmentPrice;
+        return totalCost = (foodCost(foodie) * guestNum) + (beverageCost(drink) * guestNum) + entertainmentCost(fun);
 
     }
 
@@ -109,20 +107,28 @@ public class Events {
 
     public int costAfterCoupon(int guestNum, String foodie, String drink, String fun, String couponCode) {
         int totalAfterDiscount = 0;
-        foodCost(foodie);
-        beverageCost(drink);
-        entertainmentCost(fun);
-        priceBreak(couponCode);
-        return totalAfterDiscount = (guestNum*foodPrice ) + (guestNum*beveragePrice) + entertainmentPrice - discount;
+        return totalAfterDiscount = (foodCost(foodie) * guestNum) + (beverageCost(drink) * guestNum) + entertainmentCost(fun) - priceBreak(couponCode);
     }
 
     public int getNumOfGuests() {
         return numOfGuests;
-
     }
 
     public int getFoodPrice() {
+
         return foodPrice;
+    }
+
+    public int getBeveragePrice() {
+        return beveragePrice;
+    }
+
+    public int getEntertainmentPrice() {
+        return entertainmentPrice;
+    }
+
+    public int getDiscount() {
+        return discount;
     }
 
     public Map<String, Integer> getFood() {

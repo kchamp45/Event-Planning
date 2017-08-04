@@ -52,8 +52,6 @@ public class App {
                         System.out.println("Sorry, maybe next time.");
                     }
 
-
-
                 } else if (navigationChoice.equals("exit")) {
                     System.out.println("Thank you for visiting our site");
                     programRunning = false;

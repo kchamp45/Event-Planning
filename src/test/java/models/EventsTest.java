@@ -38,13 +38,13 @@ public class EventsTest {
     @Test
     public void multiFoodPrice_returnFoodPriceBasedOnNumOfGuests() {
         Events testEvent = new Events();
-        assertEquals(10, testEvent.multiFoodPrice(2, "dinner"));
+        assertEquals(20, testEvent.multiFoodPrice(2, "dinner"));
     }
 
     @Test
     public void costOfEvent_returnTotalCost()  {
         Events testEvent = new Events();
-        assertEquals(550, testEvent.costOfEvent(10, "no food", "soda", "dj"));
+        assertEquals(650, testEvent.costOfEvent(10, "no food", "soda", "dj"));
     }
 
     @Test
@@ -56,6 +56,6 @@ public class EventsTest {
     @Test
     public void costAfterCoupon_returnTotalCostAfterCoupon() {
         Events testEvent = new Events();
-        assertEquals(0, testEvent.costAfterCoupon(10, "no food", "soda", "dj", "CHEAP"));
+        assertEquals(550, testEvent.costAfterCoupon(10, "no food", "soda", "dj", "CHEAP"));
     }
 }

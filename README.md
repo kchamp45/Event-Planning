@@ -9,7 +9,8 @@ _Event planning that allows user to choose different options, such as the number
 | ------------- | ------------- | ------------- |
 | Create an event package | event  |     event        |
 | calculate cost of one food item  |      no food  | $0|
-| calculate cost of one food and one beverage | no food & soda | $5|  | calculate cost of one food, one beverage, one entertainment| no food, soda, dj| $505 |  
+| calculate cost of one food and one beverage | no food & soda | $5|  
+| calculate cost of one food, one beverage, one entertainment| no food, soda, dj| $505 |  
 | calculate cost of food, beverage, entertainment for number of guests |  no food, soda, dj, 10 guests| $550 |
 | calculate cost of food, beverage, entertainment for number of guests after coupon | no food, soda, dj, 10 guests, coupon| $440|
 |show the details of the event|no food, soda, dj, 10 guests, coupon|no food, soda, dj, 10, $440|
