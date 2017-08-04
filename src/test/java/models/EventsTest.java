@@ -2,6 +2,8 @@ package models;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -20,5 +22,12 @@ public class EventsTest {
         Events testEvent = new Events();
         assertEquals(1, testEvent.numOfGuests(1));
     }
+
+    @Test
+    public void foodSelection_returnFoodSelected_ArrayList();
+        Events testEvent = new Events();
+        ArrayList<String>expectedOutput = new ArrayList<String>();
+        expectedOutput.add(1);
+        assertEquals(expectedOutput, testEvent.foodSelection("dinner"));
 
 }
