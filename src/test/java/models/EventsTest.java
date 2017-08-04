@@ -37,7 +37,7 @@ public class EventsTest {
     @Test
     public void costOfEvent_returnTotalCost()  {
         Events testEvent = new Events();
-        assertEquals(0, testEvent.costOfEvent("no food", "soda"));
+        assertEquals(0, testEvent.costOfEvent("no food", "soda", "dj"));
     }
 
 }

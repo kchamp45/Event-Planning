@@ -100,9 +100,9 @@ public class Events {
         return entertainmentPrice;
     }
 
-    public int costOfEvent(String foodie, String drink) {
+    public int costOfEvent(String foodie, String drink, String fun) {
         int totalCost = 0;
-        return totalCost += foodPrice + beveragePrice;
+        return totalCost += foodPrice + beveragePrice + entertainmentPrice;
     }
 
 
