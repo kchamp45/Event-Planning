@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Guest on 8/4/17.
@@ -13,5 +14,10 @@ public class Events {
 
     public int numOfGuests(int input) {
         return input;
+    }
+    public String foodSelection (String foodie) {
+        List<String>food = new ArrayList<String>();
+        food.add("no food");
+        return food.get(0);
     }
 }
