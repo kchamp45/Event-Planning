@@ -30,8 +30,14 @@ public class EventsTest {
     }
 
     @Test
-    public void foodPrice_returnPriceOfFoodSelected() throws Exception {
+    public void foodPrice_returnPriceOfFoodSelected() {
         Events testEvent = new Events();
         assertEquals(0, testEvent.foodPrice("no food"));
     }
+    @Test
+    public void costOfEvent_returnTotalCost()  {
+        Events testEvent = new Events();
+        assertEquals(0, testEvent.costOfEvent("no food"));
+    }
+
 }
