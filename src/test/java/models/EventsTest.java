@@ -1,10 +1,10 @@
 package models;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.List;
 
 import java.util.ArrayList;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Guest on 8/4/17.
@@ -27,8 +27,8 @@ public class EventsTest {
     public void foodSelection_returnFoodSelected_ArrayList() throws Exception {
         Events testEvent = new Events();
         ArrayList<String> expectedOutput = new ArrayList<String>();
-        expectedOutput.add("dinner");
-        assertEquals(expectedOutput, testEvent.foodSelection("dinner"));
+        expectedOutput.add("no food");
+        assertEquals(expectedOutput, testEvent.foodSelection("no food"));
     }
 
 }

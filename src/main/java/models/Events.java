@@ -8,6 +8,7 @@ import java.util.List;
  */
 public class Events {
     private int numOfGuests;
+
     private ArrayList<String>food;
     private ArrayList<String>beverages;
     private ArrayList<String>entertainments;
@@ -15,9 +16,13 @@ public class Events {
     public int numOfGuests(int input) {
         return input;
     }
+
     public String foodSelection (String foodie) {
         List<String>food = new ArrayList<String>();
         food.add("no food");
         return food.get(0);
+    }
+    public ArrayList<String> getFood() {
+        return food;
     }
 }
