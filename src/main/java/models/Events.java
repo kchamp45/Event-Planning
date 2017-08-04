@@ -101,7 +101,8 @@ public class Events {
     }
 
     public int costOfEvent(String foodie, String drink) {
-        return 1;
+        int totalCost = 0;
+        return totalCost += foodPrice + beveragePrice;
     }
 
 
