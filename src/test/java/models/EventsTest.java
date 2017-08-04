@@ -15,4 +15,10 @@ public class EventsTest {
         assertEquals(true, testEvent instanceof Events);
     }
 
+    @Test
+    public void numOfGuests_storesUserInput_true() throws Exception {
+        Events testEvent = new Events();
+        assertEquals(true, testEvent.numOfGuests("1"));
+    }
+
 }
