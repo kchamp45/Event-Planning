@@ -39,7 +39,7 @@ public class App {
                     System.out.println("Want a discount?  If you have a group over 150, enter this coupon code: 'DUD2017'.  If not, try us out with this coupon code: 'CHEAP'.");
                     String couponCode = bufferedReader.readLine().toUpperCase();
                     if (couponCode.equals("DUD2017")) {
-                        if (party.toApplyCoupon(inputGuests)) {
+                        if (inputGuests >= 150) {
                             int afterDiscount = party.costAfterCoupon(inputGuests, inputFoodChoice, inputBeverage, inputFun, couponCode);
                             System.out.println("If coupon applies, here is your total after discount: $" + afterDiscount);
                         } else {

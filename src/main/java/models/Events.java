@@ -12,7 +12,6 @@ public class Events {
     private int beveragePrice;
     private int entertainmentPrice;
     private int discount;
-    private int cost;
 
     Map<String, Integer> food = new HashMap<String, Integer>();
     Map<String, Integer> beverage = new HashMap<String, Integer>();
@@ -78,15 +77,9 @@ public class Events {
     public int priceBreak (String couponCode) {
         coupon.put("CHEAP", 100);
         coupon.put("DUD2017", 200);
-
-        if (couponCode.equals("CHEAP")) {
-            discount = coupon.get("CHEAP");
-        } else if (couponCode.equals("DUD2017")) {
-            discount = beverage.get("DUD2017");
-        } else {
-            discount = 0;
-        }
-         return discount;
+        discount = coupon.get("CHEAP");
+        discount = coupon.get("DUD2017");
+        return discount;
     }
 
     public int multiFoodPrice(int guestNum, String foodie) {
@@ -99,10 +92,6 @@ public class Events {
         int totalCost = 0;
         return totalCost = (foodCost(foodie) * guestNum) + (beverageCost(drink) * guestNum) + entertainmentCost(fun);
 
-    }
-
-    public boolean toApplyCoupon(int guests) {
-        return guests >= 150;
     }
 
     public int costAfterCoupon(int guestNum, String foodie, String drink, String fun, String couponCode) {
