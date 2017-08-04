@@ -95,9 +95,10 @@ public class Events {
         return discount;
     }
 
-    public int costOfEvent(int guest, String foodie, String drink, String fun) {
+    public int costOfEvent(int guest, String foodie, String drink, String fun, String code) {
         int totalCost = 0;
-        return totalCost += (foodPrice * numOfGuests) + (beveragePrice * numOfGuests) + entertainmentPrice;
+        return totalCost += (foodPrice * numOfGuests) + (beveragePrice * numOfGuests) + entertainmentPrice - discount;
+
     }
 
 
