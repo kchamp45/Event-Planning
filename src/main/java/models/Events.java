@@ -8,7 +8,7 @@ import java.util.Map;
 public class Events {
     private int numOfGuests;
     private int foodPrice;
-    private int drinkPrice;
+    private int beveragePrice;
     private int entertainmentPrice;
     private int cost;
 
@@ -68,7 +68,39 @@ public class Events {
         return foodPrice;
     }
 
-    public int costOfEvent(String foodie) {
+    public int beveragePrice(String inputBeverageChoice) {
+        beverage.put("water", 0);
+        beverage.put("soda", 50);
+        beverage.put("alcohol", 300);
+        if(inputBeverageChoice.equals("water")) {
+            beveragePrice = beverage.get("water");
+        } else if (inputBeverageChoice.equals("hor derves")) {
+            beveragePrice  = beverage.get("hor derves");
+        } else if (inputBeverageChoice.equals("dinner")) {
+            beveragePrice  = beverage.get("dinner");
+        } else {
+            System.out.println("Please enter a valid beverage choice.");
+        }
+        return beveragePrice;
+    }
+
+    public int entertainmentPrice(String inputEntertainmentChoice) {
+        entertainment.put("bad singer", 0);
+        entertainment.put("dj", 500);
+        entertainment.put("live band", 1000);
+        if(inputEntertainmentChoice.equals("bad singer")) {
+            entertainmentPrice = entertainment.get("bad singer");
+        } else if (inputEntertainmentChoice.equals("dj")) {
+            entertainmentPrice  = entertainment.get("dj");
+        } else if (inputEntertainmentChoice.equals("live band")) {
+            entertainmentPrice  = entertainment.get("live band");
+        } else {
+            System.out.println("Please enter a valid entertainment choice.");
+        }
+        return entertainmentPrice;
+    }
+
+    public int costOfEvent(String foodie, String drink) {
         return 1;
     }
 
