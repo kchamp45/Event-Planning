@@ -11,7 +11,7 @@ public class Events {
     private ArrayList<String>beverages;
     private ArrayList<String>entertainments;
 
-    public int numOfGuests(String input) {
+    public int numOfGuests(int input) {
         return input;
     }
 }

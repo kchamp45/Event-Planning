@@ -18,7 +18,7 @@ public class EventsTest {
     @Test
     public void numOfGuests_storesUserInput_true() throws Exception {
         Events testEvent = new Events();
-        assertEquals(true, testEvent.numOfGuests("1"));
+        assertEquals(1, testEvent.numOfGuests(1));
     }
 
 }
