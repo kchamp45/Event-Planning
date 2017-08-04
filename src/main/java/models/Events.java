@@ -6,34 +6,28 @@ import java.util.List;
 import java.util.Map;
 
 public class Events {
+
     private int numOfGuests;
     private int foodPrice;
     private int beveragePrice;
     private int entertainmentPrice;
-    private int cost;
     private int discount;
+    private int cost;
 
-    public Events() {
-        this.numOfGuests = numOfGuests;
-        this.food = food;
-        this.beverage = beverage;
-        this.entertainment = entertainment;
-        this.cost = cost;
-    }
     Map<String, Integer> food = new HashMap<String, Integer>();
     Map<String, Integer> beverage = new HashMap<String, Integer>();
     Map<String, Integer> entertainment = new HashMap<String, Integer>();
     Map<String, Integer> coupon = new HashMap<String, Integer>();
 
-    public int numOfGuests(int input) {
-        return input;
+    public int numOfGuests(int guestNum) {
+        return guestNum;
     }
 
     public String foodSelection (String foodie) {
             return foodie;
         }
 
-    public int foodPrice(String inputFoodChoice) {
+    public int foodCost(String inputFoodChoice) {
         food.put("no food", 0);
         food.put("hor derves", 5);
         food.put("dinner", 10);
@@ -49,7 +43,7 @@ public class Events {
         return foodPrice;
     }
 
-    public int beveragePrice(String inputBeverageChoice) {
+    public int beverageCost(String inputBeverageChoice) {
         beverage.put("water", 0);
         beverage.put("soda", 5);
         beverage.put("alcohol", 20);
@@ -65,7 +59,7 @@ public class Events {
         return beveragePrice;
     }
 
-    public int entertainmentPrice(String inputEntertainmentChoice) {
+    public int entertainmentCost(String inputEntertainmentChoice) {
         entertainment.put("bad singer", 0);
         entertainment.put("dj", 500);
         entertainment.put("live band", 1000);
@@ -81,7 +75,7 @@ public class Events {
         return entertainmentPrice;
     }
 
-    public int discount (String couponCode) {
+    public int priceBreak (String couponCode) {
         coupon.put("CHEAP", 100);
         coupon.put("DUD2017", 200);
 
@@ -92,15 +86,58 @@ public class Events {
         } else {
             discount = 0;
         }
-        return discount;
+         return discount;
     }
 
-    public int costOfEvent(int guest, String foodie, String drink, String fun, String code) {
+    public int multiFoodPrice(int guestNum, String foodie) {
+        int groupFoodPrice = 0;
+        foodCost(foodie);
+        return groupFoodPrice = foodPrice;
+    }
+    public int costOfEvent(int guestNum, String foodie, String drink, String fun) {
         int totalCost = 0;
-        return totalCost += (foodPrice * numOfGuests) + (beveragePrice * numOfGuests) + entertainmentPrice - discount;
+        foodCost(foodie);
+        beverageCost(drink);
+        entertainmentCost(fun);
+        return totalCost = foodPrice + beveragePrice + entertainmentPrice;
 
     }
 
+    public boolean toApplyCoupon(int guests) {
+        return guests >= 150;
+    }
 
+    public int costAfterCoupon(int guestNum, String foodie, String drink, String fun, String couponCode) {
+        int totalAfterDiscount = 0;
+        foodCost(foodie);
+        beverageCost(drink);
+        entertainmentCost(fun);
+        priceBreak(couponCode);
+        return totalAfterDiscount = (guestNum*foodPrice ) + (guestNum*beveragePrice) + entertainmentPrice - discount;
+    }
 
+    public int getNumOfGuests() {
+        return numOfGuests;
+
+    }
+
+    public int getFoodPrice() {
+        return foodPrice;
+    }
+
+    public Map<String, Integer> getFood() {
+        return food;
+    }
+
+    public Map<String, Integer> getBeverage() {
+        return beverage;
+    }
+
+    public Map<String, Integer> getEntertainment() {
+        return entertainment;
+    }
+
+    public Map<String, Integer> getCoupon() {
+        return coupon;
+    }
 }

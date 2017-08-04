@@ -7,11 +7,12 @@ _Event planning that allows user to choose different options, such as the number
 ## Development Specifications
 | Behavior      | Example Input         | Example Output        |
 | ------------- | ------------- | ------------- |
-| Order one small pizza | Small pizza  |      $5        |
-| Order one small pizza with mushrooms toppings on it | Small pizza + mushrooms  |      $6        |
-| Order one any size pizza with any number of toppings on it | Large pizza + mushrooms + olives + ham + tomatoes  | $13 |  
-| Order one any size pizza with any number of toppings on it for pick up |  Small pizza + mushrooms + pick up  | $6
-| Order one any size pizza with any number of toppings on it for delivery |  Small pizza + mushrooms + delivery  | $6
+| Create an event package | event  |     event        |
+| calculate cost of one food item  |      no food  | $0|
+| calculate cost of one food and one beverage | no food & soda | $5|  | calculate cost of one food, one beverage, one entertainment| no food, soda, dj| $505 |  
+| calculate cost of food, beverage, entertainment for number of guests |  no food, soda, dj, 10 guests| $550 |
+| calculate cost of food, beverage, entertainment for number of guests after coupon | no food, soda, dj, 10 guests, coupon| $440|
+|show the details of the event|no food, soda, dj, 10 guests, coupon|no food, soda, dj, 10, $440|
 
 ## Setup/Installation Requirements
 _Download the following project from the gitHub by tapping "Download" or using 'git clone' from the terminal_

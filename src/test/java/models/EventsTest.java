@@ -30,19 +30,32 @@ public class EventsTest {
     }
 
     @Test
-    public void foodPrice_returnPriceOfFoodSelected() {
+    public void foodCost_returnPriceOfFoodSelected() {
         Events testEvent = new Events();
-        assertEquals(0, testEvent.foodPrice("no food"));
+        assertEquals(10, testEvent.foodCost("dinner"));
     }
+
+    @Test
+    public void multiFoodPrice_returnFoodPriceBasedOnNumOfGuests() {
+        Events testEvent = new Events();
+        assertEquals(10, testEvent.multiFoodPrice(2, "dinner"));
+    }
+
     @Test
     public void costOfEvent_returnTotalCost()  {
         Events testEvent = new Events();
-        assertEquals(0, testEvent.costOfEvent(10, "no food", "soda", "dj", "CHEAP"));
+        assertEquals(550, testEvent.costOfEvent(10, "no food", "soda", "dj"));
     }
 
     @Test
     public void discount_returnDiscountAmount()  {
         Events testEvent = new Events();
-        assertEquals(100, testEvent.discount("CHEAP"));
+        assertEquals(100, testEvent.priceBreak("CHEAP"));
+    }
+
+    @Test
+    public void costAfterCoupon_returnTotalCostAfterCoupon() {
+        Events testEvent = new Events();
+        assertEquals(0, testEvent.costAfterCoupon(10, "no food", "soda", "dj", "CHEAP"));
     }
 }
