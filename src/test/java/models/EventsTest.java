@@ -43,6 +43,6 @@ public class EventsTest {
     @Test
     public void discount_returnDiscountAmount()  {
         Events testEvent = new Events();
-        assertEquals(0, testEvent.discount());
+        assertEquals(100, testEvent.discount("CHEAP"));
     }
 }

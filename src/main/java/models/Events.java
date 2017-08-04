@@ -11,6 +11,7 @@ public class Events {
     private int beveragePrice;
     private int entertainmentPrice;
     private int cost;
+    private int discount;
 
     public Events() {
         this.numOfGuests = numOfGuests;
@@ -22,7 +23,7 @@ public class Events {
     Map<String, Integer> food = new HashMap<String, Integer>();
     Map<String, Integer> beverage = new HashMap<String, Integer>();
     Map<String, Integer> entertainment = new HashMap<String, Integer>();
-
+    Map<String, Integer> coupon = new HashMap<String, Integer>();
 
     public int numOfGuests(int input) {
         return input;
@@ -78,6 +79,20 @@ public class Events {
             System.out.println("Please enter a valid entertainment choice.");
         }
         return entertainmentPrice;
+    }
+
+    public int discount (String couponCode) {
+        coupon.put("CHEAP", 100);
+        coupon.put("DUD2017", 200);
+
+        if (couponCode.equals("CHEAP")) {
+            discount = coupon.get("CHEAP");
+        } else if (couponCode.equals("DUD2017")) {
+            discount = beverage.get("DUD2017");
+        } else {
+            discount = 0;
+        }
+        return discount;
     }
 
     public int costOfEvent(int guest, String foodie, String drink, String fun) {
