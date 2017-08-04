@@ -26,7 +26,7 @@ public class EventsTest {
     @Test
     public void foodSelection_returnFoodSelected_ArrayList();
         Events testEvent = new Events();
-        ArrayList<String>expectedOutput = new ArrayList<String>();
+        ArrayList<String> expectedOutput = new ArrayList<String>();
         expectedOutput.add(1);
         assertEquals(expectedOutput, testEvent.foodSelection("dinner"));
 
