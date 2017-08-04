@@ -40,4 +40,9 @@ public class EventsTest {
         assertEquals(0, testEvent.costOfEvent(10, "no food", "soda", "dj"));
     }
 
+    @Test
+    public void discount_returnDiscountAmount()  {
+        Events testEvent = new Events();
+        assertEquals(0, testEvent.discount());
+    }
 }
