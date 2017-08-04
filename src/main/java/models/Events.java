@@ -10,13 +10,13 @@ import java.util.Map;
  */
 public class Events {
     private int numOfGuests;
-
-    private ArrayList<String>food;
+    private int foodPrice;
     private ArrayList<String>beverages;
     private ArrayList<String>entertainments;
 
+    Map<String, Integer> food = new HashMap<String, Integer>();
+
     public Events() {
-        Map<String, Integer> food = new HashMap<String, Integer>();
         food.put("no food", 0);
         food.put("hor derves", 100);
         food.put("dinner", 200);
@@ -32,10 +32,11 @@ public class Events {
         }
 
     public int foodPrice(String inputFoodChoice) {
-        return 0;
+        if(inputFoodChoice.equals("no food")) {
+            foodPrice = food.get("no food");
+        }
+    return foodPrice;
+    }
 
-    }
-    public ArrayList<String> getFood() {
-        return food;
-    }
+
 }

@@ -32,6 +32,6 @@ public class EventsTest {
     @Test
     public void foodPrice_returnPriceOfFoodSelected() throws Exception {
         Events testEvent = new Events();
-        assertEquals(true, testEvent.foodPrice("no food"));
+        assertEquals(0, testEvent.foodPrice("no food"));
     }
 }
