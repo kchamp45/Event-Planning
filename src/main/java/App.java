@@ -1,4 +1,5 @@
-import models.Events;
+import models.Event;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class App {
         boolean programRunning = true;
         while(programRunning) {
             try {
-                Events party = new Events();
+                Event newEvent = new Event();
 
                 System.out.println("Let's plan an event together.  Choose 'party' or 'exit' if you are not ready at this time.");
                 String navigationChoice = bufferedReader.readLine();
@@ -28,7 +29,7 @@ public class App {
                     System.out.println("For your entertainment, choose: 'clown', 'dj', or 'live band'");
                     String inputFun = bufferedReader.readLine().toLowerCase();
 
-                    int totalCost = party.costOfEvent(inputGuests, inputFoodChoice, inputBeverage, inputFun);
+                    int totalCost = newEvent.costOfEvent(inputGuests, inputFoodChoice, inputBeverage, inputFun);
 
                     System.out.println("Number of guests: " + inputGuests);
                     System.out.println("Food choice: " + inputFoodChoice);
@@ -40,13 +41,13 @@ public class App {
                     String couponCode = bufferedReader.readLine().toUpperCase();
                     if (couponCode.equals("DUD2017")) {
                         if (inputGuests >= 150) {
-                            int afterDiscount = party.costAfterCoupon(inputGuests, inputFoodChoice, inputBeverage, inputFun, couponCode);
+                            int afterDiscount = newEvent.costAfterCoupon(inputGuests, inputFoodChoice, inputBeverage, inputFun, couponCode);
                             System.out.println("If coupon applies, here is your total after discount: $" + afterDiscount);
                         } else {
                             System.out.println("Sorry you do not meet our minimum number of guest.");
                         }
                     } else if (couponCode.equals("CHEAP")) {
-                        int afterDiscount = party.costAfterCoupon(inputGuests, inputFoodChoice, inputBeverage, inputFun, couponCode);
+                        int afterDiscount = newEvent.costAfterCoupon(inputGuests, inputFoodChoice, inputBeverage, inputFun, couponCode);
                         System.out.println("If coupon applies, here is your total after discount: S" + afterDiscount);
                     } else {
                         System.out.println("Sorry, maybe next time.");

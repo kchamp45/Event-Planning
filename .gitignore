@@ -41,3 +41,10 @@ build/
 ############
 .idea
 .idea/
+
+build
+.gradle/
+.idea/
+gradle/
+gradlew*
+Settings.gradle

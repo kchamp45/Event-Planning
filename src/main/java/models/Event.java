@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Events {
+public class Event {
 
     private int numOfGuests;
     private int foodPrice;
@@ -77,8 +77,13 @@ public class Events {
     public int priceBreak (String couponCode) {
         coupon.put("CHEAP", 100);
         coupon.put("DUD2017", 200);
-        discount = coupon.get("CHEAP");
-        discount = coupon.get("DUD2017");
+        if (couponCode.equals("CHEAP")) {
+            discount = coupon.get("CHEAP");
+        } else if (couponCode.equals("DUD2017")) {
+            discount = coupon.get("DUD2017");
+        } else {
+            System.out.println("Please enter a valid coupon code choice.");
+        }
         return discount;
     }
 
